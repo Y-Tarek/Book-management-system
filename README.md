@@ -43,6 +43,7 @@ https://documenter.getpostman.com/view/28439113/2sA3dxDrRG
 
          To run unit tests make sure:
           - Set TEST_DATABASE_URL with your prefered database engine
+          - Set FLASK_ENV to testing to use the testing database
          Run  
            - python -m unittest test
        
