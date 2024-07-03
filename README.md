@@ -20,8 +20,14 @@ https://documenter.getpostman.com/view/28439113/2sA3dxDrRG
          - JWT_SECRET_KEY
          - FLASK_ENV
          - FLASK_DEBUG
-         note: FLASK_ENV can be either development or testing) if you choose development your value for this variable DATABASE_URL is applied  if testing value for this variable TEST_DATABASE_URL is applied
-               in another word development env use a database and testing use another one, you can make them both the same database but be aware that after tests are finsihed database tables are deleted.
+           
+          The FLASK_ENV environment variable can be set to either development or testing.
+          When FLASK_ENV=development, the application uses the database specified by the DATABASE_URL environment variable.
+          When FLASK_ENV=testing, the application uses the database specified by the TEST_DATABASE_URL environment variable.
+          Please note that while you can configure both environments to use the same database, it is important to be aware
+          that during testing, the database tables will be deleted after the tests are completed.
+          
+          Ensure that you properly manage your database configurations to prevent unintended data loss.
                
       2- Create a virtual environment and activate thie venv using this commands
          - python -m venv venv
